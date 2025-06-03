@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for character encoding and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Title of the web page shown in the browser tab -->
+  <title>See 'N' Say Storymaker</title>
+
+  <!-- Link to external CSS file for styling -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Main container for the app -->
+  <div class="container">
+    
+    <!-- Heading of the application -->
+    <h1>🎉 See 'N' Say Storymaker 🎉</h1>
+
+    <!-- Card wrapper for content box -->
+    <div class="card">
+
+      <!-- Instructional text -->
+      <p class="instructions">Click the buttons below to build a silly story!</p>
+
+      <!-- Button group for generating individual story parts -->
+      <div class="buttons">
+        <!-- Each button corresponds to one part of the story -->
+        <button onclick="generatePart(0)">1️⃣</button>
+        <button onclick="generatePart(1)">2️⃣</button>
+        <button onclick="generatePart(2)">3️⃣</button>
+        <button onclick="generatePart(3)">4️⃣</button>
+        <button onclick="generatePart(4)">5️⃣</button>
+      </div>
+
+      <!-- Button group for generating full story or resetting -->
+      <div class="buttons">
+        <!-- Generates all parts of the story at once -->
+        <button onclick="generateFullStory()">🎲 Full Story</button>
+        
+        <!-- Resets/clears the current story -->
+        <button onclick="resetStory()">🔁 Reset</button>
+      </div>
+
+      <!-- Output area where the generated story appears -->
+      <div id="story-output" class="story">Click a number to start your story!</div>
+
+      <!-- Button to trigger speech synthesis to read the story aloud -->
+      <button id="speak-btn" onclick="speakStory()">🔊 Hear the Story</button>
+    </div>
+
+    <!-- Footer with creator information -->
+    <footer>Created by Vishal | COMP1006 Assignment</footer>
+  </div>
+
+  <!-- Link to external JavaScript file that powers story logic -->
+  <script src="script.js"></script>
+</body>
+</html>

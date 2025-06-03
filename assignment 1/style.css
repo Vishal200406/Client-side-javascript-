@@ -1,0 +1,103 @@
+/* --- Base styling for the whole page --- */
+body {
+  margin: 0; /* Remove default margin */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun, playful font */
+  background: linear-gradient(to right, #ffe259, #ffa751); /* Bright orange-yellow gradient background */
+  display: flex; /* Center everything using flexbox */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make sure it takes full height of screen */
+  color: #333; /* Default text color */
+}
+
+/* --- Container that holds everything --- */
+.container {
+  text-align: center;
+  padding: 20px; /* Add some space inside */
+}
+
+/* --- Main heading style --- */
+h1 {
+  font-size: 2.5rem; /* Make it big */
+  color: #fff; /* White text */
+  text-shadow: 2px 2px #444; /* Add shadow for depth */
+}
+
+/* --- Card-style box to hold content --- */
+.card {
+  background: #fff; /* White background */
+  padding: 30px;
+  border-radius: 25px; /* Soft, rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow around card */
+  max-width: 500px;
+  margin: auto;
+}
+
+/* --- Instructions paragraph inside the card --- */
+.instructions {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* --- Spacing for button groups --- */
+.buttons {
+  margin: 20px 0;
+}
+
+/* --- Styling for all buttons --- */
+.buttons button {
+  font-size: 1.5rem; /* Emoji size */
+  margin: 8px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 20px; /* Rounded buttons */
+  background-color: #ffcc00; /* Bright yellow */
+  transition: all 0.3s ease; /* Smooth hover effect */
+  cursor: pointer;
+  box-shadow: 0 5px #d4a017; /* Slight 3D effect */
+}
+
+/* --- Hover effect for buttons --- */
+.buttons button:hover {
+  background-color: #ffd633; /* Slightly lighter yellow */
+  transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* --- Output area for the story text --- */
+#story-output.story {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 12px;
+  border: 2px dashed #ffa751; /* Fun dashed border */
+  font-size: 1.3rem;
+  margin-top: 20px;
+  min-height: 60px; /* Keeps the box from shrinking too small */
+  transition: 0.3s ease;
+}
+
+/* --- Style for the "Hear the Story" button --- */
+#speak-btn {
+  margin-top: 20px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  background-color: #4caf50; /* Green background */
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px #3e8e41;
+  transition: 0.3s ease;
+}
+
+/* --- Hover effect for "Hear the Story" button --- */
+#speak-btn:hover {
+  background-color: #45a049; /* Slightly lighter green */
+  transform: scale(1.05); /* Grows a little on hover */
+}
+
+/* --- Footer style at the bottom --- */
+footer {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #fff; /* Light text for contrast on gradient background */
+}
