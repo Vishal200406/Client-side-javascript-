@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoothie Machine</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>🥤 Smoothie Machine</h1>
+        <p>Create Your Perfect Smoothie</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Order Form -->
+        <section class="order-section">
+            <h2>Build Your Smoothie</h2>
+            <form id="smoothie-form">
+                
+                <!-- Customer Name -->
+                <div class="form-group">
+                    <label for="customer-name">Your Name:</label>
+                    <input type="text" id="customer-name" name="customerName" required 
+                           placeholder="Enter your name">
+                </div>
+
+                <!-- Size Selection -->
+                <div class="form-group">
+                    <label>Choose Size:</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="size" value="small" data-price="5.99">
+                            Small (12oz) - $5.99
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="medium" data-price="7.99" checked>
+                            Medium (16oz) - $7.99
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="large" data-price="9.99">
+                            Large (20oz) - $9.99
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Base Liquid -->
+                <div class="form-group">
+                    <label for="base">Choose Base:</label>
+                    <select id="base" name="base" required>
+                        <option value="">Select base</option>
+                        <option value="milk">Milk</option>
+                        <option value="almond-milk">Almond Milk</option>
+                        <option value="water">Water</option>
+                        <option value="orange-juice">Orange Juice</option>
+                    </select>
+                </div>
+
+                <!-- Fruits -->
+                <div class="form-group">
+                    <label>Choose Fruits (select 2):</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="fruits" value="banana">
+                            🍌 Banana
+                        </label>
+                        <label>
+                            <input type="checkbox" name="fruits" value="strawberry">
+                            🍓 Strawberry
+                        </label>
+                        <label>
+                            <input type="checkbox" name="fruits" value="blueberry">
+                            🫐 Blueberry
+                        </label>
+                        <label>
+                            <input type="checkbox" name="fruits" value="mango">
+                            🥭 Mango
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Add-ons -->
+                <div class="form-group">
+                    <label>Add-ons (optional):</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="addons" value="protein">
+                            💪 Protein Powder (+$2.00)
+                        </label>
+                        <label>
+                            <input type="checkbox" name="addons" value="honey">
+                            🍯 Honey (+$0.50)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Order Button -->
+                <button type="submit" class="order-button">Create My Smoothie</button>
+                
+                <!-- Price Display -->
+                <div class="price-display">
+                    <strong>Total: $<span id="total-price">7.99</span></strong>
+                </div>
+            </form>
+        </section>
+
+        <!-- Order Result -->
+        <section id="order-result" class="order-result" style="display: none;">
+            <h2>Your Smoothie Order</h2>
+            <div id="smoothie-details">
+                <!-- Order details will appear here -->
+            </div>
+            <button onclick="resetOrder()" class="new-order-button">Order Another</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Smoothie Machine</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/smoothie.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html> 
